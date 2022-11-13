@@ -1,0 +1,75 @@
+html {
+  font-size: 10px;
+  font-family: 'Noto Sans SC', sans-serif;
+  background-color: #6667AB;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FF9500;
+  padding: 0 20px 20px 20px;
+  border: 5px solid #868570;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  margin: 0;
+  padding: 20px 0;
+  color: #5613a8;
+  text-shadow: 3px 3px 1px black;
+}
+
+#nav {
+  margin: 0 auto;
+  width: 400px;
+  display: block;
+  border-radius: 25px;
+}
+
+hr {
+  color: orange;
+}
+
+#pp {
+  font-family: "楷体";
+  font-size: 22px;
+}
+
+#ppp {
+  font-family: "楷体";
+  font-size: 28px;
+  font-weight: 200;
+  color: green;
+}
+
+#tabb {
+  margin: 0 auto;
+  display: block;
+  border-spacing: 20px 3px;
+}
+
+#navv {
+  width: 250px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+}
+
+#trr {
+  margin: 0 auto;
+  display: block;
+}
+
+#dd {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#navvv {
+  width: 180px;
+  margin: 0 auto;
+  display: block;
+  border-radius: 20px;
+}
