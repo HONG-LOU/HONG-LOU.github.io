@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>For U</title>
+  <link rel="stylesheet" href="../css/blog.css">
 </head>
+
 <body>
-  <p>
-    not finished!
-  </p>
+  <div class="container">
+    <input type="text" placeholder="What is ur name?" id="input"
+      onkeydown="var e = windows.event || arguments[0]; if(e.keyCode==13) {check()}">
+    <span class="left"></span>
+    <span class="right"></span>
+    <span class="top"></span>
+    <span class="bottom"></span>
+  </div>
+
+  <button class="login-button" onclick="check()">OK</button>
+
+  <script src="inner.js"></script>
+
 </body>
+
 </html>

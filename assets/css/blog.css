@@ -1,0 +1,115 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.login-button { /* 按钮美化 */
+	width: 250px; /* 宽度 */
+	height: 40px; /* 高度 */
+	border-width: 0px; /* 边框宽度 */
+	border-radius: 3px; /* 边框半径 */
+	background: #1E90FF; /* 背景颜色 */
+	cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+	outline: none; /* 不显示轮廓线 */
+	font-family: Microsoft YaHei; /* 设置字体 */
+	color: white; /* 字体颜色 */
+	font-size: 17px; /* 字体大小 */
+  position: absolute;
+  left: 40%;
+  top: 56%;
+}
+.login-button:hover { /* 鼠标移入按钮范围时改变颜色 */
+	background: #5599FF;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #282c34;
+}
+
+.container {
+  height: 30px;
+  width: 250px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+  padding-left: 5px;
+  background-color: #282c34;
+  color: #61dafb;
+  caret-color: #61dafb;
+  text-align: center;
+}
+input::placeholder {
+  color: rgba(97, 218, 251, .5);
+}
+
+span {
+  position: absolute;
+  content: "";
+  display: block;
+  background-color: #61dafb;
+  transition: transform .1s ease-in-out;
+}
+
+.top,
+.bottom {
+  left: 0px;
+  right: 0px;
+  height: 2px;
+
+}
+
+.left, 
+.right {
+  top: 0px;
+  bottom: 0px;
+  width: 2px;
+  transform: scaleY(0);
+}
+
+.top {
+  top: 0px;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition-delay: .2s;
+}
+.left {
+  left: 0px;
+  transform-origin: bottom center;
+  transition-delay: .3s;
+}
+.bottom {
+  bottom: 0px;
+}
+.right {
+  right: 0px;
+  transform-origin: top center;
+  transition-delay: .1s;
+}
+
+input:focus ~ .right {
+  transform: scaleY(1);
+  transform-origin: bottom center;
+}
+input:focus ~ .left {
+  transform: scaleY(1);
+  transform-origin: top center;
+}
+input:focus ~ .top {
+  transform: scaleX(1);
+  transform-origin: right center;
+}
