@@ -9,6 +9,49 @@
 </head>
 
 <body>
+  <script language="JavaScript">
+    if (window.Event)
+      document.captureEvents(Event.MOUSEUP);
+    function nocontextmenu() {
+      event.cancelBubble = true
+      event.returnValue = false;
+      return false;
+    }
+    function norightclick(e) {
+      if (window.Event) {
+        if (e.which == 2 || e.which == 3)
+          return false;
+      }
+      else
+        if (event.button == 2 || event.button == 3) {
+          event.cancelBubble = true
+          event.returnValue = false;
+          return false;
+        }
+    }
+    document.oncontextmenu = nocontextmenu; // for IE5+
+    document.onmousedown = norightclick; // for all others
+    //-->
+  </script>
+  <script type="text/javascript">
+    //保密
+    //禁止F12查看源码
+    document.onkeydown = function () {
+      if (window.event && window.event.keyCode == 123) {
+        alert("Fuck You!");
+        event.keyCode = 0;
+        event.returnValue = false;
+      }
+      if (window.event && window.event.keyCode == 13) {
+        window.event.keyCode = 505;
+      }
+      if (window.event && window.event.keyCode == 8) {
+        alert(str + "\n请使用Del键进行字符的删除操作！");
+        window.event.returnValue = false;
+      }
+    }
+  </script>
+
   <div class="container">
     <input type="text" placeholder="What is ur name?" id="input"
       onkeydown="var e = windows.event || arguments[0]; if(e.keyCode==13) {check()}">

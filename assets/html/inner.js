@@ -1,3 +1,5 @@
+
+
 var btn = document.getElementsByClassName('login-button')[0];
 var url = 'https://note.youdao.com/s/4HTy2sYY';
 check = function () {
